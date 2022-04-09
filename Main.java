@@ -23,10 +23,11 @@ public class Main {
         //int[] aItems = {2,3};
         //int[] aItems = {1,2,3,4,5};
          //int[] aItems = {3,2,1,0,4};
-        //int len = aItems.length;
+        
 
         //  Testing big array
         int[] aItems = new int[30000];
+      
         // array length
         int len = aItems.length;
 
