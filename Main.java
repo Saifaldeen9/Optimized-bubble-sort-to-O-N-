@@ -45,40 +45,39 @@ public class Main {
 
         int idx = 0;  // Array index
         int temp = 0; // temp variable to hold the value for swapping
-        int next  = 1; // next pointer that points to the next index array element
+       
         int swapping = 0; // counting swapping time at each iteration too
 
         do
         {
-            //Do loop termination, when there is no swapping and next variable reaching the end
-            if(next == len && swapping == 0)
+            //Do loop termination, when there is no swapping and (idx + 1) variable reaching the end
+            if((idx + 1) == len && swapping == 0)
                 break;
 
-            // indexes reset when reach the end of array at each iteration, to start from beginning
-            if(next == len)
+            // index reset when reach the end of array at each iteration, to start from beginning
+            if((idx+1) == len)
             {
                 idx = 0;
-                next = 1;
+
                 swapping = 0 ;
             }
 
             //Testing condition that tests element and swap them
-            if(aItems[idx] > aItems[next])
+            if(aItems[idx] > aItems[idx+1])
             {
                 temp = aItems[idx];
-                aItems[idx] = aItems[next];
-                aItems[next] = temp;
+                aItems[idx] = aItems[idx+1];
+                aItems[idx+1] = temp;
                 swapping++;
             }
 
             //System.out.printf("%d", aItems[idx]);
 
-            //Increasing the indexes to move next
+            //Increasing the index to move next
             idx ++;
-            next ++;
+
 
         } while(true);
-
 
         System.out.println("Finish sorting");
 
